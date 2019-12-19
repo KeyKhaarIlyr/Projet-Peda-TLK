@@ -425,6 +425,7 @@ main aside div {
   height: auto;
   background-color: rgba(38, 42, 90, 0.4);
   border: #522800 double 13px;
+  border-radius: 30px;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 0.2s;
@@ -474,7 +475,7 @@ main aside div a:hover {
   color: white;
   border: rgba(36, 0, 82, 0.2) 1px solid;
   background-color: rgba(255, 255, 255, 0.6);
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 15px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 15px;
 }
 
 main section {
