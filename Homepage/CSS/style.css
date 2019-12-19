@@ -90,7 +90,7 @@ html body {
 }
 
 .main_nav div:last-child {
-  margin: 1.5% 3% 0 0;
+  margin: 0 3% 0 0;
   padding: 0;
   width: 50%;
   height: auto;
@@ -114,19 +114,55 @@ html body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  font-family: "Poppins-Light";
+  font-family: "Poppins";
   color: white;
-  font-size: 100%;
-  padding: 1%;
+  font-size: 110%;
+  padding: 2%;
   text-decoration: none;
+  border-radius: 50px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.main_nav div:last-child a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .main_nav div:last-child div {
   margin: 0;
-  padding: 0;
-  width: 10%;
-  height: 100%;
+  padding: 1%;
+  width: 8%;
+  height: auto;
   background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.main_nav div:last-child div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .main_nav div:last-child div img {
@@ -145,9 +181,13 @@ html body {
           align-items: center;
   margin: 0;
   padding: 0;
-  width: 35%;
+  width: 60%;
   height: 35%;
   background-color: none;
+}
+
+.main_nav div:last-child div img:hover {
+  cursor: pointer;
 }
 
 header {
@@ -267,6 +307,17 @@ header form div {
           align-items: center;
   border: white 1px solid;
   border-radius: 100px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+header form div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 header form div select {
@@ -300,6 +351,17 @@ header form button {
   border-radius: 100px;
   background-color: none;
   background: none;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+header form button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -361,7 +423,7 @@ main aside div {
   padding: 0;
   width: 100%;
   height: auto;
-  background-color: rgba(38, 42, 90, 0.2);
+  background-color: rgba(38, 42, 90, 0.4);
   border: #522800 double 13px;
   -webkit-transition-property: background-color;
   transition-property: background-color;
@@ -372,7 +434,7 @@ main aside div {
 }
 
 main aside div:hover {
-  background-color: rgba(38, 42, 90, 0.459);
+  background-color: rgba(38, 42, 90, 0.6);
 }
 
 main aside div a {
@@ -399,8 +461,8 @@ main aside div a {
           align-items: center;
   text-decoration: none;
   border-radius: 50px;
-  -webkit-transition-property: color, font-size, background-color, text-shadow;
-  transition-property: color, font-size, background-color, text-shadow;
+  -webkit-transition-property: color, background-color, text-shadow;
+  transition-property: color, background-color, text-shadow;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-in-out;
@@ -410,8 +472,7 @@ main aside div a {
 main aside div a:hover {
   text-decoration: underline;
   color: white;
-  font-size: 140%;
-  border: #a5004d 1px solid;
+  border: rgba(36, 0, 82, 0.2) 1px solid;
   background-color: rgba(255, 255, 255, 0.6);
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 15px;
 }
@@ -436,10 +497,17 @@ main section {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 
 main section:hover {
   cursor: pointer;
+  background-color: rgba(38, 42, 90, 0.7);
 }
 
 main section h3 {
@@ -606,7 +674,7 @@ main section div article span:hover {
 }
 
 .Découvrir a:hover {
-  color: #3CB3CD;
+  color: #3c4bcd;
 }
 
 .Découvrir a:last-child {
@@ -614,7 +682,7 @@ main section div article span:hover {
 }
 
 .Découvrir a:last-child:hover {
-  color: #01758f;
+  color: #3c4bcd;
 }
 
 .Découvrir section {
@@ -637,6 +705,16 @@ main section div article span:hover {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 150px 10px 150px 10px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.Découvrir section:hover {
+  background-color: rgba(38, 42, 90, 0.7);
 }
 
 .Découvrir section .Métier {
@@ -766,6 +844,16 @@ main section div article span:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.Avis:hover {
+  background-color: rgba(38, 42, 90, 0.7);
 }
 
 .Avis #main_avis01 {
@@ -788,6 +876,16 @@ main section div article span:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.Avis #main_avis01:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .Avis #main_avis01 img {
@@ -857,6 +955,16 @@ main section div article span:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.Avis #main_avis02:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .Avis #main_avis02 img {
