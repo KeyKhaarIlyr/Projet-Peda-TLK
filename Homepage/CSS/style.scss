@@ -65,8 +65,9 @@ html
 		margin: 0;
 		@include flex(row wrap, center, center);
 		background-image: url(../IMG/Blobs/blob_bg1.svg);
-		background-size: 130%;
-		background-position-x: -105px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 		background-position-y: -510px;
 	}
 }
@@ -74,22 +75,23 @@ html
 .main_nav
 {
 	@include stats(0, 0, 100%, 10%, rgba(0, 0, 0, 0));
-	@include flex(row wrap, space-between, center);
+	@include flex(row wrap, center, center);
 
 	div:first-child
 	{
-		@include stats((1.5% 0 0 3%), (3% 0 0 0), 10%, auto, none);
+		@include stats((1.5% 0 0 3%), (3% 0 0 0), 30%, auto, none);
 		border: red 1px solid;
 	}
 	div:last-child
 	{
-		@include stats((0 3% 0 0), 0, 50%, auto, none);
-		@include flex(row nowrap, space-between, center);
+		@include stats((0 3% 0 0), 0, 100%, auto, none);
+		@include flex(row nowrap, center, center);
 		a
 		{
 			align-self: center;
 			@include font("Poppins", white, 110%);
-			padding: 2%;
+			padding: 1%;
+			margin: 2%;
 			text-decoration: none;
 			border-radius: 50px;
 			transition-property: background-color;
@@ -103,7 +105,7 @@ html
 		}
 		div
 		{
-			@include stats(0, 1%, 8%, auto, none);
+			@include stats(0, 1%, 6%, auto, none);
 			@include flex(row wrap, center, center);
 			border-radius: 100px;
 			transition-property: background-color;
@@ -116,7 +118,7 @@ html
 			img
 			{
 				@include flex(row wrap, center, center);
-				@include stats(0, 0, 60%, 35%, none);
+				@include stats(0, 0, 50%, 35%, none);
 				&:hover
 				{
 					cursor: pointer;
@@ -128,7 +130,7 @@ html
 
 header
 {
-	@include stats((10% 0), 0, 100%, auto, none);
+	@include stats((3% 0), 0, 100%, auto, none);
 	@include flex(row wrap, center, center);
 	h2
 	{
@@ -321,7 +323,7 @@ main
 		letter-spacing: 3px;
 		&:hover
 		{
-			color: rgb(60, 75, 205);
+			color: rgb(0, 79, 97);
 		}
 	}
 	a:last-child
@@ -481,4 +483,429 @@ main
 			}
 		}
 	}
+}
+
+
+
+
+@media all and (min-width: 320px) and (max-width: 1000px)
+{
+	.main_nav
+	{
+		@include flex(column wrap, center, center);
+
+		div:first-child
+		{
+			@include stats((1.5% 0 0 3%), (3% 0 0 0), 50%, auto, none);
+		}
+		div:last-child
+		{
+			@include flex(row wrap, center, center);
+			margin-top: 5%;
+			a
+			{
+				@include font("Poppins", black, 80%);
+			}
+			div
+			{
+				background-color: rgba(0, 0, 0, 0.2);
+				width: 13%;
+				margin: 3%;
+			}
+		}
+	}
+	header
+	{
+		@include stats((10% 0), 0, 100%, auto, none);
+		@include flex(row wrap, center, center);
+		h2
+		{
+			@include font("PathGoth", rgba(0, 0, 0, 0.5), 130%);
+			text-align: center;
+			letter-spacing: 0.1rem;
+		}
+		h1
+		{
+			@include stats((3% 0), 0, 100%, auto, none);
+			@include font("Oswald", rgb(36, 36, 36), 170%);
+			@include flex(column wrap, center, center);
+			letter-spacing: 0.1rem;
+			word-spacing: 0;
+			text-align: center;
+		}
+		form
+		{
+			@include stats((10% 0 0 0), 5%, 90%, auto, rgba(0, 0, 0, 0.5));
+			border-radius: 50px;
+			div
+			{
+				@include stats((5%, 0, 0, 5%), 0%, 80%, auto, none);
+				select
+				{
+					
+					@include font("Prompt", white, 100%);
+				}
+			}
+			button
+			{
+				@include stats((2% 0 0 0), 0.5%, 60%, auto, none);
+				@include font("Prompt", white, 100%);
+			}
+		}
+	}
+
+	main
+	{
+		@include flex(column wrap, center, center);
+		aside
+		{
+			@include stats((0 0 5% 0), 0, 80%, auto, none);
+			@include flex(column wrap, center, center);
+			div
+			{
+				@include flex(column wrap, center, center);
+				a
+				{
+					@include font("Prompt", rgb(255, 255, 255), 105%);
+					@include flex(row wrap, center, center);
+					text-align: center;
+				}
+				
+			}
+		}
+		section
+		{
+			@include stats(0, 0, 80%, auto, rgba(38, 42, 90, 0.459));
+			@include flex(row wrap, center, center);
+			h3
+			{
+				@include font("Poppins", white, 150%);
+			}
+			div
+			{
+				article
+				{
+					h4
+					{
+						@include stats((3% 0), 0, 100%, auto, none);
+						@include flex(row wrap, center, center);
+						@include font("Prompt", white, 100%);
+						text-align: center;
+					}
+					span
+					{
+						@include font("Prompt", white, 80%);
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	.Découvrir
+	{
+		a
+		{
+			@include stats((3% 0), (3% 1.5%), 100%, auto, none);
+			@include font("Poppins", rgb(47, 138, 158), 150%);
+			word-spacing: 0;
+			letter-spacing: 0.1rem;
+		}
+		section
+		{
+			@include stats((3% 0), 0, 100%, auto, rgba(38, 42, 90, 0.459));
+			@include flex(row wrap, center, center);
+			border-radius: 50px;
+			.Métier
+			{
+				@include stats((3% 0), 0, 70%, 100%, none);
+				@include flex(row wrap, center, center);
+				img
+				{
+					@include stats(0, 0, 100%, 100%, none);	
+					border-radius: 100px;
+				}
+				span
+				{
+					@include font("Poppins", white, 100%);
+					@include stats(0, 0, 100%, auto, none);
+					@include flex(row wrap, center, center);
+					text-align: center;
+					letter-spacing: 0;
+				}
+			}
+			aside
+			{
+				display: none;
+			}
+		}
+	}
+
+
+	.Avis
+	{
+		@include stats((5% 2%), 0, 80%, auto, rgba(38, 42, 90, 0.459));
+		border-radius: 80px;
+		@include flex(column, center, center);
+		#main_avis01
+		{
+			@include stats(3%, 0, 80%, auto, rgba(255, 255, 255, 0.3));
+			@include flex(column wrap, center, center);
+			border-radius: 150px;
+			img
+			{
+				width: 80%;
+			}
+			.Qui
+			{
+				@include stats(10%, 0, 80%, auto, none);
+				@include flex(row wrap, center, center);
+				#User_Ville01
+				{
+					@include font("Poppins", white, 90%);
+					text-align: center;
+				}
+				.satisfaction p
+				{
+					@include font("Poppins", rgb(56, 131, 68), 100%);
+					text-align: center;
+				}
+				.article_avis p
+				{
+					@include font("Poppins", white, 90%);
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+		#main_avis02
+		{
+			@include stats(3%, 0, 80%, auto, rgba(0, 0, 0, 0.4));
+			border-radius: 150px;
+			@include flex(column wrap, center, center);
+			img
+			{
+				width: 80%;
+			}
+			.Qui
+			{
+				@include stats(10%, 0, 70%, auto, none);
+				@include flex(column wrap, center, center);
+				#User_Ville02
+				{
+					@include font("Poppins", white, 90%);
+					@include flex(row-reverse wrap, center, center);
+				}
+				.satisfaction p
+				{
+					@include font("Poppins", rgb(196, 124, 65), 100%);
+					text-align: center;
+				}
+				.article_avis
+				{
+					@include flex(row wrap, center, center);
+					p
+					{
+						@include font("Poppins", white, 90%);
+						text-align: center;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media all and (min-width: 800px) and (max-width: 1000px)
+{
+	.main_nav
+	{
+		div:last-child
+		{
+			@include stats((2% 3% 0 0), 0, 100%, auto, none);
+			a
+			{
+				@include font("Poppins", white, 150%);
+			}
+		}
+	}
+
+	header
+	{
+		h2
+		{
+			@include font("PathGoth", rgba(0, 0, 0, 0.3), 170%);
+			font-weight: 10;
+		}
+		h1
+		{
+			letter-spacing: 0;
+		}
+		form
+		{
+			@include stats((10% 0 0 0), 5%, 70%, auto, rgba(0, 0, 0, 0.5));
+			border-radius: 50px;
+			div
+			{
+				@include stats((5%, 0, 0, 5%), 0%, 80%, auto, none);
+				select
+				{
+					
+					@include font("Prompt", white, 170%);
+				}
+			}
+			button
+			{
+				@include stats((2% 0 0 0), 0.5%, 80%, auto, none);
+				@include font("Prompt", white, 200%);
+			}
+		}
+	}
+	main
+	{
+
+		@include stats((10% 0 20% 0), 0, 100%, 80rem, none);
+		@include flex(row wrap, center, center);
+		aside
+		{
+			@include stats((0, 0, 20%, 0), 0, 80%, auto, none);
+			div
+			{
+				a
+				{
+					@include font("Prompt", rgb(255, 255, 255), 200%);
+				}
+			}
+		}
+		section
+		{
+			@include stats((10%, 0, 0, 0), 0, 80%, auto, rgba(38, 42, 90, 0.459));
+			h3
+			{
+				@include font("Poppins", white, 200%);
+			}
+			div
+			{
+				article
+				{
+					h4
+					{
+						@include font("Prompt", white, 200%);
+					}
+					span
+					{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.Découvrir
+	{
+		a
+		{
+			@include stats(3%, (3% 1.5%), 80%, auto, none);
+			@include font("Poppins", rgb(47, 138, 158), 300%);
+		}
+		a:last-child
+		{
+			width: 100%;
+		}
+		section
+		{
+			@include flex(row wrap, center, center);
+			.Métier
+			{
+				@include stats((0 0 5% 3%), 0, 70%, 100%, none);
+				span
+				{
+					margin-top: 5%;
+					@include font("Poppins", white, 170%);
+					@include flex(row wrap, center, center);
+					text-align: center;
+				}
+			}
+			aside
+			{
+				display: none;
+			}
+		}
+	}
+
+	.Avis
+	{
+		@include stats((5% 2%), 0, 80%, auto, rgba(38, 42, 90, 0.459));
+		#main_avis01
+		{
+			@include stats(2%, 0, 80%, auto, rgba(255, 255, 255, 0.3));
+			@include flex(column wrap, center, center);
+			border-radius: 100px;
+			img
+			{
+				width: 50%;
+			}
+			.Qui
+			{
+				@include flex(column wrap, center, center);
+				#User_Ville01
+				{
+					@include font("Poppins", white, 180%);
+					width: 100%;
+					text-align: center;
+				}
+				.satisfaction p
+				{
+					@include font("Poppins", rgb(102, 173, 114), 180%);
+					font-weight: bolder;
+					width: 100%;
+					text-align: center;
+				}
+				.article_avis p
+				{
+					@include font("Poppins", white, 180%);
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+		#main_avis02
+		{
+			@include stats(2%, 0, 80%, auto, rgba(0, 0, 0, 0.4));
+			@include flex(column wrap, center, center);
+			border-radius: 100px;
+			img
+			{
+				width: 50%;
+			}
+			.Qui
+			{
+				@include stats(0, 0, 70%, auto, none);
+				@include flex(column wrap, center, center);
+				#User_Ville02
+				{
+					@include font("Poppins", white, 180%);
+					@include flex(column-reverse wrap, center, center);
+					width: 100%;
+				}
+				.satisfaction p
+				{
+					@include font("Poppins", rgb(196, 124, 65), 180%);
+					font-weight: bolder;
+					width: 100%;
+				}
+				.article_avis
+				{
+					@include flex(row wrap, flex-end, center);
+					p
+					{
+						@include font("Poppins", white, 180%);
+						text-align: center;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
 }
