@@ -729,10 +729,10 @@ main section div article span:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -744,7 +744,7 @@ main section div article span:hover {
 .Découvrir section .Métier img {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 80%;
   height: auto;
   background-color: none;
   border-radius: 100px 0 0 0;
@@ -756,7 +756,7 @@ main section div article span:hover {
   font-size: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 80%;
   height: auto;
   background-color: none;
   text-align: right;
@@ -775,10 +775,10 @@ main section div article span:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -804,9 +804,10 @@ main section div article span:hover {
       -ms-flex-align: auto;
           align-items: auto;
   width: 30%;
+  margin-right: 2%;
 }
 
-.Découvrir section aside div p {
+.Découvrir section aside div .Expert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,11 +821,13 @@ main section div article span:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  margin-left: 2%;
+  height: auto;
   font-family: "Poppins";
   color: #84c6da;
   font-size: 100%;
+  text-decoration: none;
 }
 
 .Avis {
@@ -1850,6 +1853,9 @@ footer {
     text-align: center;
     width: 100%;
   }
+  .ctnr_footer {
+    margin-top: 20%;
+  }
 }
 
 @media all and (min-width: 800px) and (max-width: 1000px) {
@@ -2179,7 +2185,7 @@ footer {
   }
 }
 
-@media all and (min-width: 1200px) and (max-width: 1500px) {
+@media all and (min-width: 1200px) and (max-width: 1600px) {
   .ctnr_footer {
     margin-top: 20%;
   }

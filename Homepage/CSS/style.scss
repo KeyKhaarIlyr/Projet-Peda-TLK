@@ -349,16 +349,16 @@ main
 		.Métier
 		{
 			@include stats((0 0 0 3%), 0, 30%, 100%, none);
-			@include flex(row wrap, center, center);
+			@include flex(column wrap, center, center);
 			img
 			{
-				@include stats(0, 0, 100%, auto, none);	
+				@include stats(0, 0, 80%, auto, none);	
 				border-radius: 100px 0 0 0;
 			}
 			span
 			{
 				@include font("Poppins", white, 100%);
-				@include stats(0, 0, 100%, auto, none);
+				@include stats(0, 0, 80%, auto, none);
 				text-align: right;
 				letter-spacing: 1px;
 			}
@@ -368,20 +368,23 @@ main
 			@include stats(1%, 0, 65%, 100%, none);
 			div
 			{
-				@include flex(column wrap, center, center);
+				@include flex(row wrap, center, center);
 				padding: 0;
 				margin: 0;
 				img
 				{
 					@include flex(row wrap, auto, auto);
 					width: 30%;
+					margin-right: 2%;
 				}
-				p
+				.Expert
 				{
 					@include flex(row wrap, center, center);
-					width: 50%;
-					height: 100%;
+					width: 60%;
+					margin-left: 2%;
+					height: auto;
 					@include font("Poppins", rgb(132, 198, 218), 100%);
+					text-decoration: none;
 				}
 			}
 		}
@@ -912,7 +915,10 @@ footer {
 			}
 		}
 	}
-
+	.ctnr_footer
+	{
+		margin-top: 20%;
+	}
 }
 
 @media all and (min-width: 800px) and (max-width: 1000px)
@@ -1113,7 +1119,7 @@ footer {
 
 }
 
-@media all and (min-width: 1200px) and (max-width: 1500px)
+@media all and (min-width: 1200px) and (max-width: 1600px)
 {
 	.ctnr_footer
 	{
